@@ -9,7 +9,6 @@ export default async function createUser(
 ): Promise<IUser | undefined> {
   try {
     connectToDatabase();
-    console.log(connectToDatabase());
     const newUser = await User.create(params);
     return newUser;
   } catch (error) {
